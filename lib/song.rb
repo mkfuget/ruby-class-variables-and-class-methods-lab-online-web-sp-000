@@ -12,8 +12,20 @@ class Song
     @@artists.push(artist)
   end
     
-  def self.genre_count
-    return @@genres
+  def self.count
+    return @@count
+  end
+  
+  def genre_count
+    out = {}
+      @@genres.each do |genre|
+        if(out.has_key?(genre))
+          out[genre] += 1 
+        else 
+          out[genre] = 1 
+        end 
+      end 
+    return out 
   end
 end
 
