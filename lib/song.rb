@@ -47,6 +47,19 @@ class Song
       end 
     return out 
   end
+  
+    def self.artist_count
+    out = {}
+      @@artists.each do |artist|
+        if(out.has_key?(artist))
+          out[artist] += 1 
+        else 
+          out[artist] = 1 
+        end 
+      end 
+    return out 
+  end
+
 end
 
 
