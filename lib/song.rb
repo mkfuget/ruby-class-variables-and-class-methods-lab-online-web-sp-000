@@ -15,7 +15,15 @@ class Song
   def self.count
     return @@count
   end
-  
+  def genres
+    out = []
+        @@genres.each do |genre|
+      if(out.has_key?(genre))
+        out[genre] += 1 
+      else 
+        out[genre] = 1 
+      end 
+
   def genre_count
     out = {}
       @@genres.each do |genre|
