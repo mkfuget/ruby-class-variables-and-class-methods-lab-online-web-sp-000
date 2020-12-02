@@ -18,5 +18,5 @@ class Song
       @@artists.push(artist)
     end 
     
-    def genre_count
+    def self.genre_count
       return 
