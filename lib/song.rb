@@ -13,10 +13,12 @@ class Song
     else
       @@genres[genre] = 1
     end
-    
+
     if(!@@artist.has?(artist))
       @@artists.push(artist)
     end 
+  end
     
-    def self.genre_count
-      return 
+  def self.genre_count
+    return @@genres
+  end
