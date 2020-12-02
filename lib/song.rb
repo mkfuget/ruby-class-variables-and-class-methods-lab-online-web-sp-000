@@ -14,4 +14,9 @@ class Song
       @@genres[genre] = 1
     end
     
-    if(@@artist.has)
+    if(!@@artist.has?(artist))
+      @@artists.push(artist)
+    end 
+    
+    def genre_count
+      return 
