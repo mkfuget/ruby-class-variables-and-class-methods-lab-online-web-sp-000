@@ -15,7 +15,7 @@ class Song
   def self.count
     return @@count
   end
-  def genres
+  def self.genres
     out = []
     @@genres.each do |genre|
       if(!out.include?(genre))
@@ -25,7 +25,7 @@ class Song
     return out 
   end
   
-  def artists
+  def self.artists
     out = []
     @@artists.each do |artist|
       if(!out.include?(artist))
@@ -36,7 +36,7 @@ class Song
   end
 
   
-  def genre_count
+  def self.genre_count
     out = {}
       @@genres.each do |genre|
         if(out.has_key?(genre))
