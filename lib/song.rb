@@ -8,13 +8,9 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    if(!@@genres.include?(genre))
-      @@genres.push(genre)
-    end
+    @@genres.push(genre)
 
-    if(!@@artists.include?(artist))
-      @@artists.push(artist)
-    end 
+    @@artists.push(artist)
   end
     
   def self.genre_count
