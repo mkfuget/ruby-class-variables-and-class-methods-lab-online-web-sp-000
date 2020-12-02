@@ -1,5 +1,5 @@
 class Song 
-  @@genres = []
+  @@genres = {}
   @@artists = []
   @@count = 0
   attr_accessor :name, :artist, :genre
@@ -7,6 +7,11 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    @@count+=1
-    if(@@)
+    @@count += 1
+    if(@@genres.has_key?(genre))
+      @@genres[genre] += 1
+    else
+      @@genres[genre] = 1
+    end
     
+    if(@@artist.has)
