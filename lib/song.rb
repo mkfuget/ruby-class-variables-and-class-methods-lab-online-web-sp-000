@@ -12,7 +12,7 @@ class Song
       @@genres.push(genre)
     end
 
-    if(!@@artist.include?(artist))
+    if(!@@artists.include?(artist))
       @@artists.push(artist)
     end 
   end
