@@ -8,11 +8,11 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    if(@@genres.has?(genre))
+    if(@@genres.include?(genre))
       @@genres.push(genre)
     end
 
-    if(!@@artist.has?(artist))
+    if(!@@artist.include?(artist))
       @@artists.push(artist)
     end 
   end
